@@ -4,9 +4,9 @@ echo "bbr.sh: 本脚本用于检查bbr是否开启, 内核版本需4.9+"
 
 #手动输入内核版本是否大于4.9
 uname -r
-echo "内核版本是否大于4.9,enter yes,y; no,n"
-read kernel_version
-if [ $kernel_version = "no" ] || [ $kernel_version = "n" ]; then
+echo "内核版本是否大于4.9,enter 'y' or 'n' "
+read -r kernel_version
+if [ "$kernel_version" != "y" ]; then
   exit
 fi
 
